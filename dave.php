@@ -16,8 +16,8 @@
 	
 	<body>
 		<div class="container">
-		
-		<form action="dave.php" method="post">
+
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 			<p>
 				<label for="name">Name:</label> <br />
 				<input type="text" id="name" name="name" size="20" maxlength="40" />
