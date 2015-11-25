@@ -29,10 +29,8 @@
 						<input type="email" class="form-control" id="email" name="email" placeholder="but@dave.com">
 					</div>
 
-					<input type="submit" id="submit" name = "submit" value="Go!" />
-					<!--
+					<!-- <input type="submit" id="submit" name = "submit" value="Go!" /> -->
 					<button type="submit" id="submit" name = "submit" class="btn btn-default">Add person</button>
-					-->
 				</form>
 			</div>
 
