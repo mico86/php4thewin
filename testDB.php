@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "kalimero";
 $dbname = "sakila";
 
 if (!function_exists('mysqli_init') && !extension_loaded('mysqli')) {
@@ -22,6 +22,9 @@ $sql = "SELECT first_name, last_name FROM sakila.actor";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
+
+
+
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "Name: " . $row["first_name"]. " " . $row["last_name"]. "<br>";
