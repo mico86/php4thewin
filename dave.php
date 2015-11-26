@@ -21,12 +21,12 @@
 			<div class="formbox">
 				<form class="form-inline" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<div class="form-group">
-						<label for="name">Name</label>
-						<input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe">
+						<label for="first_name">First Name</label>
+						<input type="text" class="form-control" id="first_name" name="first_name" placeholder="Tony">
 					</div>
 					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="but@dave.com">
+						<label for="last_name">Last Name</label>
+						<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Montana">
 					</div>
 
 					<!-- <input type="submit" id="submit" name = "submit" value="Go!" /> -->
@@ -37,12 +37,11 @@
 		<?php
 
 			// If the name field is filled in
-			if (isset($_POST['name']))
+			if (isset($_POST['first_name']))
 			{
-				$name = $_POST['name'];
-				$email = $_POST['email'];
-				printf("<p>Hi %s! <br />", $name);
-				printf("The address %s will soon be a spam-magnet! </p>", $email);
+				$first_name = $_POST['first_name'];
+				$last_name = $_POST['last_name'];
+				printf("<p>Hi %s! </p>", $first_name);
 			}
 
 			$servername = "localhost";
@@ -55,9 +54,8 @@
 			// Check connection
 			if ($conn->connect_error) {
 				die("Connection failed: " . $conn->connect_error);
-			} 
-			echo "<p>Connected successfully to DB ...</p>";
-			
+			}
+
 			echo "<br>";
 			
 			$sql = "SELECT actor_id, first_name, last_name FROM sakila.actor";
@@ -68,12 +66,12 @@
 
 				// design table header
 				echo '<table cellpadding="0" cellspacing="0" class="table table-hover">';
-				echo '<tr><th>ID</th><th>NAME</th><th>LAST</th><th>Key</th><th>ACTION</th></tr>';
+				echo '<tr><th>ID</th><th>NAME</th><th>LAST</th><th>ACTION</th></tr>';
 
 				while($row = $result->fetch_assoc()) {
 
 					// design table rows
-					echo "<tr><td>" . $row["actor_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["actor_id"] . "</td><td>" . $row["actor_id"] . "</td>" . "<td>delete</td></tr>";
+					echo "<tr><td>" . $row["actor_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["last_name"] . "</td>" . "<td>delete</td></tr>";
 						}
 			} else {
 				echo "0 results";
