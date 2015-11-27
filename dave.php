@@ -35,7 +35,6 @@
 			</div>
 
 		<?php
-
 			// If the name field is filled in
 			if (isset($_POST['first_name']))
 			{
@@ -94,7 +93,9 @@
 				while($row = $result->fetch_assoc()) {
 
 					// design table rows
-					echo "<tr><td>" . $row["actor_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["last_name"] . "</td>" . "<td>delete</td></tr>";
+					echo "<tr><td>" . $row["actor_id"] . "</td><td>" . $row["first_name"] . "</td><td>" . $row["last_name"] . "</td>";
+
+					echo "<td><a href=\"delete.php?id=".$row['actor_id']."\">Delete</a></td>";
 						}
 			} else {
 				echo "0 results";
