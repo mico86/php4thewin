@@ -41,7 +41,30 @@
 			{
 				$first_name = $_POST['first_name'];
 				$last_name = $_POST['last_name'];
-				printf("<p>Hi %s! </p>", $first_name);
+
+				$sql = "INSERT INTO sakila.actor (first_name, last_name) VALUES ('$first_name', '$last_name')";
+
+				$servername = "localhost";
+				$username = "root";
+				$password = "kalimero";
+
+				// Create connection
+				$conn = new mysqli($servername, $username, $password);
+
+				// Check connection
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
+
+				if ($conn->query($sql) === TRUE) {
+					$last_id = $conn->insert_id;
+					echo "<p>New record created successfully. Last inserted ID is: " . $last_id . "</p>";
+				} else {
+					echo "Error: " . $sql . "<br>" . $conn->error;
+				}
+
+				$conn->close();
+
 			}
 
 			$servername = "localhost";

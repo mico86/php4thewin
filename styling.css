@@ -3,9 +3,3 @@
     padding: 20px 0px 20px 0px;
 
 }
-
-h1, input::-webkit-input-placeholder, button {
-    font-family: 'roboto', sans-serif;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
