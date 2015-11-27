@@ -36,12 +36,9 @@
 
 		<?php
 			// If the name field is filled in
-			if (isset($_POST['first_name']))
-			{
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-				$first_name = "";
-				$last_name = "";
-
+				// form input sanitization
 				function test_input($data) {
 					$data = trim($data);
 					$data = stripslashes($data);
@@ -49,18 +46,16 @@
 					return $data;
 				}
 
-				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					$first_name = test_input($_POST["first_name"]);
-					$last_name = test_input($_POST["last_name"]);
-				}
+				$first_name = test_input($_POST["first_name"]);
+				$last_name = test_input($_POST["last_name"]);
+
 
 				$sql = "INSERT INTO sakila.actor (first_name, last_name) VALUES ('$first_name', '$last_name')";
 
+				// Create connection
 				$servername = "localhost";
 				$username = "root";
 				$password = "kalimero";
-
-				// Create connection
 				$conn = new mysqli($servername, $username, $password);
 
 				// Check connection
