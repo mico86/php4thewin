@@ -19,7 +19,7 @@
 		<div class="container">
 
 			<div class="formbox">
-				<form class="form-inline" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+				<form class="form-inline" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 					<div class="form-group">
 						<label for="first_name">First Name</label>
 						<input type="text" class="form-control" id="first_name" name="first_name" placeholder="Tony">
@@ -38,8 +38,21 @@
 			// If the name field is filled in
 			if (isset($_POST['first_name']))
 			{
-				$first_name = $_POST['first_name'];
-				$last_name = $_POST['last_name'];
+
+				$first_name = "";
+				$last_name = "";
+
+				function test_input($data) {
+					$data = trim($data);
+					$data = stripslashes($data);
+					$data = htmlspecialchars($data);
+					return $data;
+				}
+
+				if ($_SERVER["REQUEST_METHOD"] == "POST") {
+					$first_name = test_input($_POST["first_name"]);
+					$last_name = test_input($_POST["last_name"]);
+				}
 
 				$sql = "INSERT INTO sakila.actor (first_name, last_name) VALUES ('$first_name', '$last_name')";
 
