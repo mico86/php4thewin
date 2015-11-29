@@ -2,7 +2,7 @@
     // Create connection
     $servername = "localhost";
     $username = "root";
-    $password = "kalimero";
+    $password = "root";
     $conn = new mysqli($servername, $username, $password);
 
     // sql to delete a record

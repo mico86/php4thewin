@@ -54,7 +54,7 @@
 				// Create connection
 				$servername = "localhost";
 				$username = "root";
-				$password = "kalimero";
+				$password = "root";
 				$conn = new mysqli($servername, $username, $password);
 
 				// Check connection
@@ -76,7 +76,7 @@
 
 			$servername = "localhost";
 			$username = "root";
-			$password = "kalimero";
+			$password = "root";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password);
