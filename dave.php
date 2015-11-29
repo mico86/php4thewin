@@ -11,7 +11,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="styling.css"
+	<link rel="stylesheet" href="styling.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	
@@ -35,7 +35,7 @@
 			</div>
 
 		<?php
-			// If the name field is filled in
+			// If form is submitted
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 				// form input sanitization
@@ -45,7 +45,6 @@
 					$data = htmlspecialchars($data);
 					return $data;
 				}
-
 				$first_name = test_input($_POST["first_name"]);
 				$last_name = test_input($_POST["last_name"]);
 
@@ -63,6 +62,7 @@
 					die("Connection failed: " . $conn->connect_error);
 				}
 
+				// Run SQL query and insert new record
 				if ($conn->query($sql) === TRUE) {
 					$last_id = $conn->insert_id;
 					echo "<p>New record created successfully. Last inserted ID is: " . $last_id . "</p>";
@@ -70,8 +70,8 @@
 					echo "Error: " . $sql . "<br>" . $conn->error;
 				}
 
+				// Close connection
 				$conn->close();
-
 			}
 
 			$servername = "localhost";
