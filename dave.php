@@ -14,9 +14,7 @@
 	<link rel="stylesheet" href="styling.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	
-	<body>
-		<div class="container">
+	<link rel="stylesheet" type="text/css" href="themes.css">
 
 			<div class="formbox">
 				<form class="form-inline" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
