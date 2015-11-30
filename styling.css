@@ -1,9 +1,20 @@
+.thumbnail {
+    border-radius: 0 !important;
+    padding: 0px 0px 0px 0px;
+}
+
+.navbar {
+    border-radius: 0 !important;
+    background-color: #29323c;
+}
+
 .formbox {
     padding: 20px 0px 20px 0px;
 }
 
 .card-dark {
     background: #29323c;
+    border: 0 none;
 }
 
 .card-dark h3 {
