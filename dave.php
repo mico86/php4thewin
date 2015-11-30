@@ -14,39 +14,61 @@
 	<link rel="stylesheet" href="styling.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="themes.css">
 
 	<body>
 		<div class="container">
 
-		<div class="row">
-			<div class="col-md-6 col-sm-12">
-				<div class="thumbnail no-margin-bottom">
-					<img src="cardbg.jpg" class="img-responsive">
-					<div class="caption">
-						<h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<div class="thumbnail no-margin-bottom card-dark">
+						<img src="cardbg.jpg" class="img-responsive">
+						<div class="caption">
+							<h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-12">
+					<div class="thumbnail no-margin-bottom">
+						<img src="cardbg.jpg" class="img-responsive">
+						<div class="caption">
+							<h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-12">
+					<div class="thumbnail no-margin-bottom card-dark">
+						<img src="cardbg.jpg" class="img-responsive">
+						<div class="caption">
+							<h3 id="thumbnail-label">Thumbnail label<a class="anchorjs-link" href="#thumbnail-label"><span class="anchorjs-icon"></span></a></h3>
+							<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-			<div class="formbox">
-				<form class="form-inline" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
-					<div class="form-group">
-						<label for="first_name">First Name</label>
-						<input type="text" class="form-control" id="first_name" name="first_name" placeholder="Tony">
-					</div>
-					<div class="form-group">
-						<label for="last_name">Last Name</label>
-						<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Montana">
-					</div>
 
-					<!-- <input type="submit" id="submit" name = "submit" value="Go!" /> -->
-					<button type="submit" id="submit" name = "submit" class="btn btn-default">Add person</button>
-				</form>
-			</div>
+				<div class="formbox">
+					<form class="form-inline" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+						<div class="form-group">
+							<label for="first_name">First Name</label>
+							<input type="text" class="form-control" id="first_name" name="first_name" placeholder="Tony">
+						</div>
+						<div class="form-group">
+							<label for="last_name">Last Name</label>
+							<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Montana">
+						</div>
+
+						<!-- <input type="submit" id="submit" name = "submit" value="Go!" /> -->
+						<button type="submit" id="submit" name = "submit" class="btn btn-default">Add person</button>
+					</form>
+				</div>
+
 
 		<?php
 			// If form is submitted

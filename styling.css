@@ -1,5 +1,15 @@
 .formbox {
-
     padding: 20px 0px 20px 0px;
+}
 
+.card-dark {
+    background: #29323c;
+}
+
+.card-dark h3 {
+    color: #fff;
+}
+
+.card-dark p {
+    color: #fff;
 }
