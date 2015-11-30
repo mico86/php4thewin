@@ -1,11 +1,20 @@
 .thumbnail {
     border-radius: 0 !important;
+    border: 0 none;
     padding: 0px 0px 0px 0px;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 .navbar {
     border-radius: 0 !important;
     background-color: #29323c;
+    padding: 0px 0px 0px 0px;
+    margin-bottom: 0;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 .formbox {
@@ -14,7 +23,6 @@
 
 .card-dark {
     background: #29323c;
-    border: 0 none;
 }
 
 .card-dark h3 {
@@ -23,4 +31,85 @@
 
 .card-dark p {
     color: #fff;
+}
+
+.jumbotron {
+    /* background: linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("home_bailandoo.jpg"); */
+    background: url("home_bailandoo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+}
+
+.phpblock {
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #29323c;
+    color: #eee;
+    text-align: center;
+}
+
+.col-footer {
+    padding: 60px 0px 20px 0px;
+}
+
+.fa.fa-heart {
+    color: #fd487d;
+}
+
+/* SOCIAL MEDIA LINKS */
+
+.social-media-links {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+.social-media-links li {
+    display: inline-block;
+    line-height: 1.42857;
+    margin: 0;
+    padding: 0 3px;
+}
+.social-media-links a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 23px;
+    color: white;
+    text-align: center;
+    line-height: 1.82857;
+}
+.social-media-links a:hover, .social-media-links a:focus {
+    background: transparent;
+    color: white;
+    text-decoration: none;
+}
+.social-media-links a.tw {
+    background: #53c3ee;
+}
+.social-media-links a.tw:hover, .social-media-links a.tw:focus {
+    background: #16a7df;
+}
+.social-media-links a.fb {
+    background: #5975b1;
+}
+.social-media-links a.fb:hover, .social-media-links a.fb:focus {
+    background: #3d5281;
+}
+.social-media-links a.pn {
+    background: #d54e55;
+}
+.social-media-links a.pn:hover, .social-media-links a.pn:focus {
+    background: #ad2930;
 }
