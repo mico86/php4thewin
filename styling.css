@@ -1,3 +1,7 @@
+body {
+    padding-top: 50px;
+}
+
 .thumbnail {
     border-radius: 0 !important;
     border: 0 none;
@@ -34,19 +38,18 @@
 }
 
 .jumbotron {
-    /* background: linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("home_bailandoo.jpg"); */
-    background: url("home_bailandoo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background: linear-gradient(0deg, rgba(0,0,0,0) 0, rgba(0,0,0,1) 100%), url("bckg.jpg"); */
+    background-image: url("bckg.jpg");
     -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    color: #eee;
 }
 
 .phpblock {
-    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
 }
 
 /* FOOTER */

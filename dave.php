@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 	<body>
-
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<!-- Brand and toggle get grouped for better mobile display -->
@@ -137,8 +136,8 @@
 				</div><!-- /.col -->
 			</div><!-- /.row formbox -->
 
-			<div class="row phpblock">
-				<div class="col-md-12 col-sm-12 col-xs-12"
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12 phpblock"
 					<?php
 						// If form is submitted
 						if ($_SERVER["REQUEST_METHOD"] == "POST") {
